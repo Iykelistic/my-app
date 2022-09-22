@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import "../src/assets/css/landingpage.css";
+import "../src/assets/css/event.css";
+import "../src/assets/css/createeventpage.css";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(

@@ -1,14 +1,19 @@
 import React from "react";
-import "./App.css";
-import TodoHeader from "./features/TodoHeader";
-import TodoInputField from "./features/TodoInputField";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import LandingPage from "./components/LandingPage";
+import CreateEventPage from "./components/CreateEventPage";
+import Event from "./components/Event";
 
 function App() {
   return (
-    <div className="App">
-      <TodoHeader />
-      <TodoInputField />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/create" element={<CreateEventPage />} />
+        <Route path="/event" element={<Event />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
